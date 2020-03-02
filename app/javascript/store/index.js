@@ -23,10 +23,6 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
-    bootstrap({ dispatch, getters, state }) {
-      dispatch("setWorkspaces")
-      dispatch("setSites")
-    },
     setFlash({ commit }, flash) {
       commit("SET_FLASH", flash)
     }
