@@ -119,8 +119,8 @@ export default {
         return axios
           .post('/api/posts', { content: this.content })
           .then((response) => {
-            this.url = window.location.protocol + '//' + window.location.host + '/' + response.data.uuid
-            this.$router.push({ path: '/edit/' + response.data.uuid + '/p/' + response.data.token })
+            this.url = window.location.protocol + '//' + window.location.host + '/p/' + response.data.uuid
+            this.$router.push({ path: '/edit/' + response.data.uuid + '/' + response.data.token })
           })
           .catch((error) => {
             this.$store.dispatch('setFlash', {
