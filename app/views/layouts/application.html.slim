@@ -1,10 +1,13 @@
 doctype html
-html
+html lang="en"
   head
-    title
-      | Md1
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'sites', media: 'all'
+    / link rel="icon" href=image_url("favicon.png") type="image/x-icon"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    - if @post
+      title = strip_tags(@markdown).truncate(60, separator: ' ')
+      meta name="description" content="#{strip_tags(@markdown).truncate(200, separator: ' ')}"
   body
     = yield
