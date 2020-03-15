@@ -1,0 +1,49 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+h1, .h1 {
+  font-size: $font-size-huge;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-huge;
+}
+h2, .h2 {
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-large;
+}
+h3, .h3 {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-medium;
+}
+h4, .h4 {
+  font-size: $font-size-regular;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-regular;
+}
+h5, .h5 {
+  font-size: $font-size-regular;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-regular;
+}
+h6, .h6 {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-small;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+.text-medium {
+  font-weight: $font-weight-medium;
+}
+.text-regular {
+  font-weight: $font-weight-regular;
+}

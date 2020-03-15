@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const vuePath = '/'
-const editPath = '/edit/'
+const editPath = '/edit'
 
 const routerOptions = [
   {
@@ -18,7 +18,7 @@ const routerOptions = [
         var path = to.query.redirect
         delete to.query.redirect
         return {
-          path: editPath + path,
+          path: editPath + '/' + path,
           query: to.query
         }
       } else {
@@ -30,7 +30,7 @@ const routerOptions = [
     }
   },
   {
-    path: editPath + ':postId/:token',
+    path: editPath + '/:postId/:token',
     name: 'Editor',
     component: 'Editor'
   }

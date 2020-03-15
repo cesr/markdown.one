@@ -1,22 +1,18 @@
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
+  <div id="app" class="app">
+    <router-view 
+      v-if="!this.$store.state.loading"
+    />
+    <Flash />
   </div>
 </template>
 
 <script>
+import Flash from 'components/Flash.vue'
+
 export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
+  components: {
+    Flash
   }
 }
 </script>
-
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
-</style>

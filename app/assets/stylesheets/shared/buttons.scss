@@ -1,0 +1,99 @@
+.link {
+  text-decoration: none;
+}
+
+.link-primary, .link-secondary {
+  color: $color-1;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-small;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: $color-1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &.no-underline::after {
+    display: none;
+  }
+}
+
+.link-secondary {
+  color: $color-grey-3;
+
+  &:after {
+    background: $color-grey-4;
+  }
+}
+
+.no-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input[type="submit"] {
+  border: none;
+  outline: none;
+}
+
+.button {
+  font-weight: $font-weight-demibold;
+  font-size: $font-size-regular;
+  padding: $margin-unit * 1.5 $margin-unit * 3;
+  border-radius: 100px;
+  display: inline-block;
+  text-decoration: none;
+  
+  &.button-full {
+    display: block;
+    width: 100%;
+  }
+  &.button-small {
+    padding: 6px 16px;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+  }
+}
+
+.button-primary {
+  background: $color-1;
+  color: white;
+  transition: all .1s ease-in-out;
+
+  &.button-fancy:hover {
+    box-shadow: 0 4px 24px rgba($color-1, .3);
+    transform: translateY(-2px);
+  }
+}
+.button-inverted {
+  background: white;
+  color: $color-grey-2;
+  font-weight: $font-weight-medium;
+  box-shadow: 0px 10px 40px rgba(42, 32, 64, 0.1);
+}
+.button-secondary {
+  background: rgba(black, 0.2);
+  color: white;
+  font-weight: $font-weight-medium;
+}
+.button-upgrade {
+  background: $color-4;
+  color: white;
+}
+.button-ghost {
+  background: white;
+  color: $color-grey-3;
+  font-weight: $font-weight-medium;
+  box-shadow: inset 0 0 0 2px $color-grey-5;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $color-grey-4;
+    // color: $color-grey-2;
+  }
+}

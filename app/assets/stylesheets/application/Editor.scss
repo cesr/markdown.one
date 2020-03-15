@@ -1,0 +1,54 @@
+#app {
+  #editor {
+    .editor-actions {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-height: $margin-unit * 8;
+      padding: $margin-unit * 3;
+      transition: opacity .1s ease-in-out;
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-size-small;
+      line-height: $line-height-regular;
+
+      &.show-true {
+        opacity: 1;
+      }
+      &.show-false {
+        opacity: 0;
+      }
+
+      .share-link {
+        color: $color-grey-2;
+        user-select: all;
+      }
+      
+      .editor-actions-right {
+        display: flex;
+
+        .counter:not(:first-child) {
+          margin-left: $margin-unit * 3;
+        }
+      }
+    }
+    .editor-content {
+      width: 100%;
+      height: auto;
+      border: none;
+      resize: none;
+      background: transparent;
+      margin: 0;
+      outline: none;
+      overflow: auto;
+      padding: $margin-unit * 15;
+      padding-left: calc((100vw - 680px)/2);
+      padding-right: calc((100vw - 680px)/2);
+      height: 100vh;
+      color: $color-grey-1;
+      font-size: $font-size-small;
+      line-height: $line-height-regular;
+    }
+  }
+}

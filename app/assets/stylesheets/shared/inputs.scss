@@ -1,0 +1,73 @@
+.form-divider {
+  margin: $margin-unit * 3 0;
+  height: 1px;
+  width: 100%;
+  background: $color-grey-6;
+}
+.input-group {
+  &:not(:last-child) {
+    margin-bottom: $margin-unit * 3;
+  }
+
+  label {
+    font-size: $font-size-regular;
+    font-weight: $font-weight-medium;
+    margin-bottom: 4px;
+    display: block;
+    color: $color-grey-1;
+  }
+  em {
+    margin-bottom: 4px;
+    font-size: $font-size-small;
+    display: inline-block;
+  }
+  input {
+    border: none
+  }
+  input:not([type="submit"]), select, textarea {
+    box-shadow: inset 0 0 0 2px $color-grey-5;
+    padding: $margin-unit $margin-unit * 2;
+    border-radius: 8px;
+    font-size: $font-size-regular;
+    border: none;
+    background: white;
+    -webkit-appearance: none;
+    font-weight: $font-weight-regular;
+    line-height: $margin-unit * 3;
+    width: 100%;
+    max-width: 100%;
+    margin: none;
+    outline: none;
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px $color-1;
+    }
+    &.input-code {
+      font-family: Menlo, Consolas, monospace;
+      min-height: $margin-unit * 40;
+      font-size: $font-size-small;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-3;
+    }
+    &::-moz-placeholder {
+      color: $color-grey-3;
+    }
+    &:-ms-input-placeholder {
+      color: $color-grey-3;
+    }
+    &:-moz-placeholder {
+      color: $color-grey-3;
+    }
+  }
+  input:disabled {
+    color: $color-grey-2;
+    background: $color-grey-5;
+  }
+  select {
+    background-image: image-url("icons/caret-bottom.svg");
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+  }
+}

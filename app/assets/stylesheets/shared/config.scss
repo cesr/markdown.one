@@ -1,0 +1,55 @@
+//
+// Grid & Units
+//
+
+$pagewidth: 832px; // Page width in pixels or percentage
+$breakpoint-large: 680px;
+$breakpoint-medium: 480px;
+
+$grid-gutter: 32px; // Space between columns
+$column-number: 12;
+
+$line-height: 24px;
+$margin-unit: 8px; // Base grid unit for margin and padding calculations
+
+
+//
+// Fonts & Colors
+//
+
+$font-family: Menlo, Consolas, monospace;
+$font-size-huge: 36px;
+$font-size-large: 26px;
+$font-size-medium: 20px;
+$font-size-regular: 16px;
+$font-size-small: 14px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-demibold: 600;
+$font-weight-bold: 700;
+
+$line-height-huge: 48px;
+$line-height-large: 40px;
+$line-height-medium: 32px;
+$line-height-regular: 24px;
+$line-height-small: 20px;
+
+$color-1: #44B6E7;
+$color-2: #EC5F5D;
+$color-3: #96CF7B;
+$color-4: #f1a512;
+
+$color-light: #ffffff;
+
+$color-grey-1: #203640;
+$color-grey-2: #636A6D;
+$color-grey-3: #A2A9AC;
+$color-grey-4: #D3D8DA;
+$color-grey-5: #EFF0F1;
+$color-grey-6: #F7F8F8;
+
+$color-text: $color-grey-1;
+$color-text-muted: $color-grey-3;
+
+$color-background: $color-grey-6;

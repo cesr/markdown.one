@@ -1,0 +1,46 @@
+.app {
+  .flash {
+    position: fixed;
+    bottom: $margin-unit * 3.5;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: all .2s ease;
+
+    &-true {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    &-false {
+      opacity: 0;
+      transform: translate3d(0, 200%, 0);
+    }
+
+    .flash-message {
+      border-radius: $margin-unit;
+      padding: $margin-unit $margin-unit * 2;
+      display: inline-block;
+      font-size: $font-size-small;
+      font-weight: $font-weight-medium;
+      cursor: pointer;
+      pointer-events: all;
+
+      &-notice {
+        background: $color-1;
+        color: white;
+      }
+      &-success {
+        background: $color-3;
+        color: white;
+        font-weight: $font-weight-demibold;
+      }
+      &-alert {
+        background: $color-2;
+        color: white;
+      }
+    }
+  }
+}

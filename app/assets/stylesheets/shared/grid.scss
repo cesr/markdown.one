@@ -1,0 +1,100 @@
+//
+// Grid
+//
+
+.container {
+  max-width: $pagewidth;
+  margin: auto;
+
+  &.container-full {
+    max-width: 100%;
+  }
+  &.container-fluid {
+    max-width: 90%;
+  }
+}
+
+.row {
+  max-width: 100%;
+  margin: auto;
+
+  &:after {
+    content: ' ';
+    clear: both;
+    display: table;
+  }
+
+  &.row-full .column, &.row-full .columns{
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.column, .columns {
+  width: 100%;
+  float: left;
+  padding: 0 $grid-gutter/2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &.no-gutter {
+    padding: 0;
+  }
+  &.columns-centered {
+    margin: auto;
+    float: none;
+  }
+}
+
+@mixin generate-grid-large($n, $i: 0) {
+  @while $i <= $n {
+    .large-#{$i} {
+      width: 100% * ($i / $column-number);
+    }
+    .large-offset-#{$i} {
+      margin-left: 100% * ($i / $column-number);
+    }
+    .large-offset-right-#{$i} {
+      margin-right: 100% * ($i / $column-number);
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin generate-grid-medium($n, $i: 0) {
+  @while $i <= $n {
+    .medium-#{$i} {
+      width: 100% * ($i / $column-number);
+    }
+    .medium-offset-#{$i} {
+      margin-left: 100% * ($i / $column-number);
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin generate-grid-small($n, $i: 0) {
+  @while $i <= $n {
+    .small-#{$i} {
+      width: 100% * ($i / $column-number);
+    }
+    .small-offset-#{$i} {
+      margin-left: 100% * ($i / $column-number);
+    }
+    $i: $i + 1;
+  }
+}
+
+@include generate-grid-large($column-number);
+
+@media all and (max-width: $breakpoint-large) {
+  @include generate-grid-medium($column-number);
+}
+@media all and (max-width: $breakpoint-medium) {
+  @include generate-grid-small($column-number);
+}
